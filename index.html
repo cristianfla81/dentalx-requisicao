@@ -47,6 +47,13 @@ input:focus,textarea:focus{outline:2px solid #8db26e;outline-offset:1px}
 @media(max-width:650px){.ct-teeth{max-width:100%;margin:10px auto 14px}.ct-tooth{font-size:clamp(9px,2.8vw,13px);min-height:33px;padding:5px 0}.ct-tooth.selected:after{font-size:24px}.ct-three{grid-template-columns:repeat(3,minmax(0,1fr))}.actions{position:static;display:grid;grid-template-columns:1fr 1fr;padding:10px;gap:7px}.actions button{font-size:12px;padding:11px 6px;min-height:44px}.actions button:first-child{grid-column:1/-1}}
 @media print{.ct-tooth{font-size:11px;min-height:22px}.ct-teeth{break-inside:avoid}}
 </style><style>
+/* V24: espaçamento da área de identificação, inclusive no documento PDF */
+@media print {
+ .fields{column-gap:18px;row-gap:10px}
+ .field{gap:4px;min-width:0}
+ .field input,.field textarea{min-height:22px}
+}
+</style><style>
 /* Tomografia: três blocos na ordem da requisição original */
 .ct-block{margin:10px 0 13px;break-inside:avoid;page-break-inside:avoid}
 .ct-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 12px;align-items:start}
@@ -320,25 +327,113 @@ input:focus,textarea:focus{outline:2px solid #8db26e;outline-offset:1px}
 </div><div class="exam-below"><label class="choice"><input name="exames" type="checkbox" value="Índice Carpal (Idade Óssea)"/>Índice Carpal (Idade Óssea)</label></div></section><section><div class="band">DOCUMENTAÇÕES ORTODÔNTICAS</div><div class="choices"><label class="choice"><input name="exames" type="checkbox" value="DOC ECONÔMICA: Pan + tele com 1 traçado + 3 fotos ou escaneamento + pasta papel"/>DOC ECONÔMICA: Pan + tele com 1 traçado + 3 fotos ou escaneamento + pasta papel</label></div><div class="choices"><label class="choice"><input name="exames" type="checkbox" value="DOC SIMPLIFICADA: Pan + tele com 1 traçado + 3 fotos + escaneamento + pasta papel"/>DOC SIMPLIFICADA: Pan + tele com 1 traçado + 3 fotos + escaneamento + pasta papel</label></div><div class="choices"><label class="choice"><input name="exames" type="checkbox" value="DOC ECONOMICA III: Pan + tele com 1 traçado + 6 fotos + escaneamento + pasta papel"/>DOC ECONOMICA III: Pan + tele com 1 traçado + 6 fotos + escaneamento + pasta papel</label></div><div class="choices"><label class="choice"><input name="exames" type="checkbox" value="DOC BÁSICA: Pan + tele com 1 traçado + 6 fotos + 4 inter + escaneamento + pasta papel"/>DOC BÁSICA: Pan + tele com 1 traçado + 6 fotos + 4 inter + escaneamento + pasta papel</label></div><div class="choices"><label class="choice"><input name="exames" type="checkbox" value="DOC COMPLETA: Pan + tele com 1 traçado + 8 fotos + levant. peri + 4 inter + escaneamento + pasta papel"/>DOC COMPLETA: Pan + tele com 1 traçado + 8 fotos + levant. peri + 4 inter + escaneamento + pasta papel</label></div><div class="model-print"><strong>NAS DOCUMENTAÇÕES ACIMA, INCLUIR A IMPRESSÃO DE MODELO:</strong>
 <div class="exam-two-cols"><div class="exam-col"><label class="choice"><input name="exames" type="checkbox" value="Impressão de modelo em resina com base zoccalada"/>EM RESINA COM BASE ZOCALADA</label></div>
 <div class="exam-col"><label class="choice"><input name="exames" type="checkbox" value="Modelo trabalho em resina sem base"/>MODELO TRABALHO EM RESINA SEM BASE</label></div></div></div></section><section><div class="band">ANÁLISES CEFALOMÉTRICAS</div><div class="choices"><label class="choice"><input name="exames" type="checkbox" value="USP"/>USP</label><label class="choice"><input name="exames" type="checkbox" value="Ricketts"/>Ricketts</label><label class="choice"><input name="exames" type="checkbox" value="Steiner"/>Steiner</label><label class="choice"><input name="exames" type="checkbox" value="McNamara"/>McNamara</label><label class="choice"><input name="exames" type="checkbox" value="Tweed"/>Tweed</label><label class="choice"><input name="exames" type="checkbox" value="Jarabak"/>Jarabak</label><label class="choice"><input name="exames" type="checkbox" value="Petrovic"/>Petrovic</label><label class="choice"><input name="exames" type="checkbox" value="Ricketts Frontal"/>Ricketts Frontal</label><label class="choice"><input name="exames" type="checkbox" value="Downs"/>Downs</label><label class="choice"><input name="exames" type="checkbox" value="USP/UNICAMP"/>USP/UNICAMP</label><label class="choice"><input name="exames" type="checkbox" value="Apnéia"/>Apnéia</label></div><label class="field extra">Outras análises<input data-label="Outras análises" name="detalhe_5_0" type="text"/></label></section><section><div class="band">FOTOS</div><div class="original-columns photos-columns"><div class="original-col"><div class="column-title">1. Extrabucais</div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Extrabucais: Frente"/>Frente</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Perfil Direito"/>Perfil Direito</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Perfil Esquerdo"/>Perfil Esquerdo</label></div><div class="column-choice"></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Sorriso"/>Sorriso</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Perfil Sorrindo D"/>Perfil Sorrindo D</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Perfil Sorrindo E"/>Perfil Sorrindo E</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="3/4 Rosto D"/>3/4 Rosto D</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="3/4 Rosto E"/>3/4 Rosto E</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Análise facial (Fotografias)"/>Análise facial (Fotografias)</label></div></div><div class="original-col"><div class="column-title">2. Intrabucais</div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Intrabucais: Frente"/>Frente</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Lateral Direito"/>Lateral Direito</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Lateral Esquerdo"/>Lateral Esquerdo</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Oclusal Superior"/>Oclusal Superior</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Oclusal Inferior"/>Oclusal Inferior</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Overjet"/>Overjet</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Overbite"/>Overbite</label></div></div></div></section><section><div class="band">MODELOS</div><div class="original-columns models-columns"><div class="original-col"><div class="column-title">Escaneamento intraoral</div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Escaneamento intraoral"/>Escaneamento intraoral</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Somente Arquivo Digital (*.STL)"/>Somente Arquivo Digital (*.STL)</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Invisalign"/>Invisalign</label></div></div><div class="original-col"><div class="column-title">Modelo Prototipado</div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Modelo Prototipado"/>Modelo Prototipado</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Estudo"/>Estudo</label></div><div class="column-choice"><label class="choice"><input name="exames" type="checkbox" value="Trabalho (sem base)"/>Trabalho (sem base)</label></div></div></div><div class="other-model"><label class="choice"><input id="model-other-check" name="exames" type="checkbox" value="Outros modelos"/>Outros:</label>
-<label class="field" hidden="" id="model-other-wrap"><input data-label="Outros modelos" disabled="" id="model-other-text" name="detalhe_modelos_outros" placeholder="Especifique o modelo" type="text"/></label></div></section><section><div class="band">RECOMENDAÇÕES PARA REALIZAÇÃO DE EXAMES</div><div class="notes">• Remover brincos, correntinhas e piercings.<br/>• Para sua maior comodidade, trabalhamos com horário agendado.<br/>• Os orçamentos realizados por telefone serão confirmados mediante a apresentação da requisição.</div></section><div class="hint">* Obrigatórios: nome do paciente, cirurgião-dentista e assinatura (nome e CRO). A indicação clínica é opcional. Os dados permanecem neste dispositivo até você decidir compartilhá-los.</div></form></div><div class="status" id="status" role="status"></div><div class="actions"><button id="pdf" type="button">Salvar / imprimir PDF</button><button class="secondary" id="share" type="button">Compartilhar requisição em PDF</button><button class="secondary" id="clear" type="button">Limpar formulário</button></div><div class="foot">Dental-X • Requisição digital • Versão 23 de teste. Não há envio ou armazenamento automático.</div></main><script>
+<label class="field" hidden="" id="model-other-wrap"><input data-label="Outros modelos" disabled="" id="model-other-text" name="detalhe_modelos_outros" placeholder="Especifique o modelo" type="text"/></label></div></section><section><div class="band">RECOMENDAÇÕES PARA REALIZAÇÃO DE EXAMES</div><div class="notes">• Remover brincos, correntinhas e piercings.<br/>• Para sua maior comodidade, trabalhamos com horário agendado.<br/>• Os orçamentos realizados por telefone serão confirmados mediante a apresentação da requisição.</div></section><div class="hint">* Obrigatórios: nome do paciente, cirurgião-dentista e assinatura (nome e CRO). A indicação clínica é opcional. Os dados permanecem neste dispositivo até você decidir compartilhá-los.</div></form></div><div class="status" id="status" role="status"></div><div class="actions"><button id="pdf" type="button">Salvar / imprimir PDF</button><button class="secondary" id="share" type="button">Compartilhar requisição em PDF</button><button class="secondary" id="clear" type="button">Limpar formulário</button></div><div class="foot">Dental-X • Requisição digital • Versão 24 de teste. Não há envio ou armazenamento automático.</div></main><script>
 const form=document.getElementById('req'),status=document.getElementById('status');
 const valid=()=>{if(!form.reportValidity()){status.textContent='Preencha nome do paciente, cirurgião-dentista e assinatura (nome e CRO) antes de continuar.';return false;}status.textContent='';return true};
 const selected=()=>[...form.querySelectorAll('input[type=checkbox]:checked')].map(e=>e.value);
 const summary=()=>{let d=new FormData(form);let s='REQUISIÇÃO DENTAL-X\nPaciente: '+d.get('paciente')+'\nCirurgião-Dentista: '+d.get('dentista')+'\nIndicação clínica: '+d.get('indicacao')+'\nAssinatura (nome e CRO): '+d.get('assinatura')+'\nData: '+(d.get('data')||'')+'\nE-mail: '+(d.get('email')||'')+'\nExames / opções:\n'+selected().map(x=>'• '+x).join('\n');form.querySelectorAll('[data-label]').forEach(e=>{if(e.value.trim())s+='\n'+e.dataset.label+': '+e.value.trim()});return s};
-document.getElementById('pdf').onclick=()=>gerarArquivoPDF(false);
-// Gera o PDF no dispositivo, sem enviar dados do paciente a um servidor.
-// V23: os dois comandos usam o MESMO documento HTML original.
-// A folha de impressão do iOS permite salvar ou compartilhar o PDF pelo menu nativo.
-function abrirDocumentoCompleto(paraCompartilhar){
- if(!valid())return;
- status.textContent=paraCompartilhar
-  ? 'Na prévia de impressão, toque em Compartilhar para enviar a requisição completa em PDF pelo WhatsApp.'
-  : 'Na prévia de impressão, escolha Salvar em Arquivos ou Compartilhar para guardar o PDF completo.';
- // A impressão nativa preserva as imagens, odontogramas, campos e marcações.
- window.print();
+
+// V24: os dois botões geram o MESMO PDF a partir da requisição visual completa.
+const pdfLibs=[
+ 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js',
+ 'https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js',
+ 'https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js'
+];
+async function carregarGerador(){
+ if(window.html2pdf)return;
+ for(const url of pdfLibs){
+  try{
+   await new Promise((ok,fail)=>{
+    const sc=document.createElement('script');sc.src=url;
+    sc.onload=()=>window.html2pdf?ok():fail(new Error('Biblioteca inválida'));
+    sc.onerror=()=>fail(new Error('Servidor indisponível'));
+    document.head.appendChild(sc);
+   });
+   return;
+  }catch(_){}
+ }
+ throw new Error('Não foi possível carregar o gerador. Confira a conexão ou tente outro navegador.');
 }
-document.getElementById('pdf').onclick=()=>abrirDocumentoCompleto(false);
-document.getElementById('share').onclick=()=>abrirDocumentoCompleto(true);
+function prepararRequisicao(){
+ const origem=document.querySelector('.shell');
+ const copia=origem.cloneNode(true);
+ copia.querySelectorAll('.actions,.status,.hint,.foot,.no-print').forEach(e=>e.remove());
+ // A cópia é isolada, mas conserva valores preenchidos e marcações visuais.
+ const originais=origem.querySelectorAll('input,textarea,select');
+ const copiados=copia.querySelectorAll('input,textarea,select');
+ originais.forEach((campo,i)=>{
+  const c=copiados[i];if(!c)return;
+  if(campo.type==='checkbox'||campo.type==='radio'){
+   c.checked=campo.checked;
+   if(campo.checked)c.setAttribute('checked','checked');else c.removeAttribute('checked');
+  }else if(c.tagName==='TEXTAREA'){c.value=campo.value;c.textContent=campo.value;}
+  else if(c.tagName==='SELECT'){c.value=campo.value;}
+  else{c.value=campo.value;c.setAttribute('value',campo.value);}
+ });
+ // Preserva o estado dos odontogramas interativos.
+ origem.querySelectorAll('.ct-tooth').forEach((e,i)=>{
+  const d=copia.querySelectorAll('.ct-tooth')[i];
+  if(d){d.classList.toggle('selected',e.classList.contains('selected'));d.setAttribute('aria-pressed',e.getAttribute('aria-pressed')||'false');}
+ });
+ copia.style.cssText='width:794px;max-width:794px;margin:0;background:white;box-shadow:none;border:0';
+ copia.querySelectorAll('.head').forEach(e=>e.style.minHeight='0');
+ const conteudo=copia.querySelector('.content');
+ if(conteudo)conteudo.style.padding='12px 22px';
+ return copia;
+}
+async function gerarPDF(compartilhar){
+ if(!valid())return;
+ const btn=document.getElementById(compartilhar?'share':'pdf');
+ btn.disabled=true;
+ let area;
+ try{
+  status.textContent='Preparando a requisição completa em PDF...';
+  await carregarGerador();
+  area=document.createElement('div');
+  area.style.cssText='position:fixed;left:-10000px;top:0;width:794px;background:white;z-index:-1';
+  area.appendChild(prepararRequisicao());
+  document.body.appendChild(area);
+  await document.fonts?.ready;
+  const paciente=(form.elements.namedItem('paciente')?.value||'paciente')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-zA-Z0-9_-]/g,'_').slice(0,45);
+  const filename='Requisicao_DentalX_'+paciente+'.pdf';
+  const config={
+   margin:[7,7,7,7],filename,
+   image:{type:'jpeg',quality:0.95},
+   html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff',scrollX:0,scrollY:0},
+   jsPDF:{unit:'mm',format:'a4',orientation:'portrait',compress:true},
+   pagebreak:{mode:['css','legacy'],avoid:['.ct-teeth','.map-panel','.ct-block','.original-columns']}
+  };
+  const blob=await window.html2pdf().set(config).from(area.firstElementChild).outputPdf('blob');
+  if(compartilhar&&navigator.share&&navigator.canShare&&typeof File!=='undefined'){
+   const arquivo=new File([blob],filename,{type:'application/pdf'});
+   if(navigator.canShare({files:[arquivo]})){
+    try{
+     await navigator.share({files:[arquivo],title:'Requisição Dental-X'});
+     status.textContent='Compartilhamento aberto.';
+     return;
+    }catch(e){if(e.name==='AbortError'){status.textContent='Compartilhamento cancelado.';return;}}
+   }
+  }
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement('a');link.href=url;link.download=filename;
+  document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),60000);
+  status.textContent=compartilhar
+   ? 'O compartilhamento direto não está disponível neste navegador. PDF baixado; anexe-o ao WhatsApp.'
+   : 'PDF completo gerado. Confira as páginas antes de utilizar.';
+ }catch(e){
+  status.textContent='Falha ao gerar PDF: '+e.message+'. A opção de impressão continua disponível pelo navegador.';
+ }finally{
+  if(area)area.remove();
+  btn.disabled=false;
+ }
+}
+document.getElementById('pdf').textContent='Baixar PDF completo';
+document.getElementById('share').textContent='Compartilhar PDF';
+document.getElementById('pdf').onclick=()=>gerarPDF(false);
+document.getElementById('share').onclick=()=>gerarPDF(true);
 document.getElementById('ct-bottom-other-check').addEventListener('change',function(){const f=document.getElementById('ct-bottom-other-text');f.disabled=!this.checked;if(!this.checked)f.value=''});
 document.getElementById('clear').onclick=()=>{if(confirm('Limpar todos os campos desta requisição?')){form.reset();document.getElementById('ct-bottom-other-text').disabled=true;document.getElementById('ct-bottom-other-text').value='';document.querySelectorAll('.ct-tooth.selected').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false')});document.getElementById('model-other-wrap').hidden=true;document.getElementById('model-other-text').disabled=true;document.getElementById('model-other-text').value='';status.textContent=''}};
 </script><script>
